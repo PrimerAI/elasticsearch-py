@@ -29,17 +29,17 @@ if sys.version_info[:2] == (2, 6):
     install_requires.append('unittest2')
 
 setup(
-    name = 'elasticsearch',
-    description = "Python client for Elasticsearch",
+    name = 'elasticsearch_legacy',
+    description = "Python client for legacy Elasticsearch distribution",
     license="Apache License, Version 2.0",
     url = "https://github.com/elastic/elasticsearch-py",
     long_description = long_description,
     version = __versionstr__,
-    author = "Honza Král",
-    author_email = "honza.kral@gmail.com",
+    author = "Anna Saplitski",
+    author_email = "asaplitski@primer.ai", # With apologies to honza.kral@gmail.com
     packages=find_packages(
         where='.',
-        exclude=('test_elasticsearch*', )
+        exclude=('test_elasticsearch_legacy*', )
     ),
     classifiers = [
         "Development Status :: 5 - Production/Stable",
@@ -59,6 +59,6 @@ setup(
     ],
     install_requires=install_requires,
 
-    test_suite='test_elasticsearch.run_tests.run_all',
+    test_suite='test_elasticsearch_legacy.run_tests.run_all',
     tests_require=tests_require,
 )
