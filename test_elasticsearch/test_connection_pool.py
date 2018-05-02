@@ -1,7 +1,7 @@
 import time
 
-from elasticsearch.connection_pool import ConnectionPool, RoundRobinSelector, DummyConnectionPool
-from elasticsearch.exceptions import ImproperlyConfigured
+from elasticsearch_legacy.connection_pool import ConnectionPool, RoundRobinSelector, DummyConnectionPool
+from elasticsearch_legacy.exceptions import ImproperlyConfigured
 
 from .test_cases import TestCase
 

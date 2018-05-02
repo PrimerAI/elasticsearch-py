@@ -2,10 +2,10 @@
 from __future__ import unicode_literals
 import time
 
-from elasticsearch.transport import Transport, get_host_info
-from elasticsearch.connection import Connection
-from elasticsearch.connection_pool import DummyConnectionPool
-from elasticsearch.exceptions import ConnectionError, ImproperlyConfigured
+from elasticsearch_legacy.transport import Transport, get_host_info
+from elasticsearch_legacy.connection import Connection
+from elasticsearch_legacy.connection_pool import DummyConnectionPool
+from elasticsearch_legacy.exceptions import ConnectionError, ImproperlyConfigured
 
 from .test_cases import TestCase
 

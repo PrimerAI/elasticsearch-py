@@ -15,12 +15,12 @@ def fetch_es_repo():
 
     repo_path = environ.get(
         'TEST_ES_REPO',
-        abspath(join(dirname(__file__), pardir, pardir, 'elasticsearch'))
+        abspath(join(dirname(__file__), pardir, pardir, 'elasticsearch_legacy'))
     )
 
     # no repo
     if not exists(repo_path) or not exists(join(repo_path, '.git')):
-        print('No elasticsearch repo found...')
+        print('No elasticsearch_legacy repo found...')
         # set YAML DIR to empty to skip yaml tests
         environ['TEST_ES_YAML_DIR'] = ''
         return
@@ -59,8 +59,8 @@ def run_all(argv=None):
     if argv is None:
         argv = [
             'nosetests', '--with-xunit',
-            '--with-xcoverage', '--cover-package=elasticsearch', '--cover-erase',
-            '--logging-filter=elasticsearch', '--logging-level=DEBUG',
+            '--with-xcoverage', '--cover-package=elasticsearch_legacy', '--cover-erase',
+            '--logging-filter=elasticsearch_legacy', '--logging-level=DEBUG',
             '--verbose',
         ]
 
